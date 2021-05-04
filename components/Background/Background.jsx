@@ -28,7 +28,7 @@ function Background(props) {
             >
               <>
                 {props.src[0].type == "video" && (
-                  <video src={props.src[0].src} autoPlay loop />
+                  <video src={props.src[0].src} autoPlay loop muted/>
                 )}
 
                 {props.src[0].type == "color" && (

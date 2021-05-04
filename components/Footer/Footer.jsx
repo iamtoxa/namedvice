@@ -15,7 +15,7 @@ function Footer(props) {
         </Link>
       </span>
       <div className={styles.langs}>
-        <Link href={"/home"}>
+        <Link href={"/ru/home"}>
           <a
             className={`${styles.lang} ${
               props.pageLang == "ru" ? styles.active : ""

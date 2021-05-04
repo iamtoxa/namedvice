@@ -45,11 +45,11 @@ export default function Page({ page, pageLang }) {
 
 export async function getServerSideProps(context) {
   console.log(context.query.slug)
-  var pageLang = 'ru';
+  var pageLang = 'en';
   try {
     const pageSlug = context.query.slug.filter(el=>!['en', 'ru'].includes(el)).join('/')
 
-    pageLang = context.query.slug.find(el=>['en', 'ru'].includes(el)) || 'ru'
+    pageLang = context.query.slug.find(el=>['en', 'ru'].includes(el)) || 'en'
 
     var pageData = require(`Mocks/pages/${pageSlug}`)
       .default;
