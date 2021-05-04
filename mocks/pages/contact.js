@@ -18,32 +18,32 @@ export default {
         socials: [
           {
             caption: "Vk",
-            url: "#",
+            url: "https://vk.com/namedvicemusic",
           },
           {
             caption: "Spotify",
-            url: "#",
+            url: "https://open.spotify.com/artist/08xJNDoTyqvDkHXMUP2Tc8",
           },
           {
             caption: "Youtube",
-            url: "#",
+            url: "https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCy3b59BmaO87KiN5b49iggA%2Ffeatured&cc_key=",
           },
           {
             caption: "Instagram",
-            url: "#",
+            url: "https://www.instagram.com/namedvice/",
           },
           {
-            caption: "Soundcloud",
-            url: "#",
+            caption: "Yandex Music",
+            url: "https://music.yandex.ru/artist/9998143",
           },
           {
-            caption: "Facebook",
-            url: "#",
+            caption: "Apple Music",
+            url: "https://music.apple.com/us/artist/namedvice/1531866825",
           },
         ],
         contacts: {
           blocks: [{ title: "Для сотрудничества", items: [{
-            content: "example@mail.com"
+            content: "namedvicemusic@gmail.com"
           }] }],
         },
       },
