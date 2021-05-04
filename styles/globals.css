@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #000;
+
+  font-family: 'Montserrat';
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page{
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.page_container{
+  position: relative;
+
+  max-width: 100vw;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 0 16px;
+  z-index: 3;
+
+  margin-top: 80px;
+  padding-bottom: 80px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.page{
+  padding: 0;
+  max-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .page_container{
+    position: relative;
+
+    max-width: 100vw;
+    margin: 0 auto;
+    width: 100vw;
+    padding: 0 32px;
+    z-index: 3;
+
+    margin-top: 120px;
+    padding-bottom: 120px;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+  }
+  .page{
+    padding: 0;
+    max-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page_container{
+    max-width: calc(1024px + 600px);
+    margin: 0 auto;
+    width: 100vw;
+    padding: 0 300px;
+    z-index: 3;
+
+    max-height: none;
+    overflow-y: visible;
+  }  
+
+  .page{
+    padding: 200px 0;
+    max-height: none;
+  }
+}
+
+/* 
+@font-face {
+  font-family: 'VTBGroupUI';
+  font-display: swap;
+  font-weight: 300;
+  font-size: 1rem;
+  src: url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Light/VTBGroupUI-Light.woff2')
+      format('woff2'),
+    url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Light/VTBGroupUI-Light.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'VTBGroupUI';
+  font-display: swap;
+  font-weight: normal;
+  font-size: 1rem;
+  src: url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Regular/VTBGroupUI-Regular.woff2')
+      format('woff2'),
+    url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Regular/VTBGroupUI-Regular.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'VTBGroupUI';
+  font-display: swap;
+  font-weight: 500;
+  font-size: 1rem;
+  src: url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Medium/VTBGroupUI-Medium.woff2')
+      format('woff2'),
+    url('/fonts/VTBGroupUI_3Web/VTBGroupUI-Medium/VTBGroupUI-Medium.woff')
+      format('woff');
+} */
+
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 500ms linear;
+}
+
+.react-photo-gallery--gallery img{
+  border-radius: 8px;
+  box-shadow: 0 10px 10px -10px #00000050;
+}
+
+/* width */
+html::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: #0c0c0c; 
+}
+ 
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+button, a, input{
+  font-family: inherit;
+}

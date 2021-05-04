@@ -1,0 +1,11 @@
+@import 'Styles/vars.scss';
+
+.DynBlock{
+  display: block;
+  width: 100%;
+  min-height: 100px;
+
+  &:not(:last-child){
+    margin-bottom: 48px;
+  }
+}

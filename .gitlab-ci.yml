@@ -1,0 +1,15 @@
+stages:
+  - compose
+
+docker-compose-stage:
+  stage: compose
+  tags:
+    - stage
+  only:
+    refs:
+      - stage
+
+  before_script:
+    - echo "$ENV" > "$(pwd)/.env"
+  script:
+    - docker-compose up -d --build

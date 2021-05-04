@@ -1,0 +1,60 @@
+//Цветовая палитра
+$color-Blue: #0A2896;
+$color-Black: #2F3441;
+$color-Blue_cobalt: #0075FE;
+$color-Grey: #EAEDF5;
+$color-Grey_dark: #6B7683;
+$color-Grey_light: #F3F7FA;
+$color-Grey_dark-stroke: #ACB6C3;
+$color-White: #FFFFFF;
+$color-Blue_retail: #0A2896;
+$color-Blue_medium: #1E4BD2;
+$color-super_light: #E1F5FF;
+
+$color-Error: #CA181F;
+
+$color-Grey_light-stroke :#DDE0EA;
+
+//Шрифты
+// $safe-fonts: "Arial", sans-serif;
+
+// $font-weight-light: "VTBGroupUI-Light", $safe-fonts;
+// $font-weight-regular: "VTBGroupUI-Book", $safe-fonts;
+// $font-weight-medium: "VTBGroupUI-Medium", $safe-fonts;
+
+// $font-family: "VTBGroupUI", $safe-fonts;
+
+//Брейкпоинты
+$screen-sm: "screen and (min-width: 375px)";
+$screen-md: "screen and (min-width: 768px)";
+$screen-lg: "screen and (min-width: 1440px)";
+
+
+
+
+
+//Миксины
+@mixin h1 {
+    
+}
+
+@mixin h2 {
+  /* Mob/H2 */
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 90%;
+
+  /* or 29px */
+  letter-spacing: -0.06em;
+
+
+  @media #{$screen-lg} {
+    /* Des/H2 */
+    font-size: 48px;
+
+    /* or 43px */
+    letter-spacing: -0.06em;
+  }
+}
