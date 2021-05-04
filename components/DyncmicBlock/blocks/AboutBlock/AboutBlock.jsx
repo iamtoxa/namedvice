@@ -3,7 +3,7 @@ import styles from "./AboutBlock.module.scss";
 function AboutBlock(props) {
   return (
     <div className={styles.AboutBlock}>
-      {props.blocks?.map((block, index) => {
+      {props.blocks?.filter(block => block.content).map((block, index) => {
         return (
           <div className={styles.block}>
             {block.className == 'quote' && <img src="/images/quote.svg" alt="" className={styles.quoteImg}/>}

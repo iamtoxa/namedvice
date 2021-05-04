@@ -1,6 +1,12 @@
-import moment from "moment";
 
-export default {
+const copy = {
+  ru: {
+  },
+  en: {
+  },
+};
+
+const data = (copy) => ({
   Background: {
     src: [
       {
@@ -12,4 +18,8 @@ export default {
     ],
     alt: "Namedvice",
   }
+});
+
+export default (lang) => {
+  return data(copy[lang]);
 };

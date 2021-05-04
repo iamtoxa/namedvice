@@ -1,0 +1,39 @@
+@import 'Styles/vars.scss';
+
+.Footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  color: rgba(#FFF, 0.5);
+  display: flex;
+  
+  margin: 20px;
+
+  >*:not(:last-child){
+    margin-right: 8px;
+
+    border-right: 1px solid #FFFFFF;
+
+    padding-right: 8px;
+  }
+
+
+  .langs{
+    display: flex;
+
+    >*:not(:last-child){
+      margin-right: 8px;
+    }
+
+    .lang{
+      &.active{
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .studio{
+    color: rgba(#FFF, 0.9);
+  }
+}

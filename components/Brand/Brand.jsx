@@ -7,8 +7,8 @@ function Brand(props) {
   const router = useRouter();
 
   return (
-    <Link href={"/home"}>
-      <a className={`${styles.Brand} ${router.asPath != '/home' ? styles.small : ""}`}>
+    <Link href={`${props.pageLang ? `/${props.pageLang}/home` : "/home"}`}>
+      <a className={`${styles.Brand} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
           Namedvice
       </a>
     </Link>

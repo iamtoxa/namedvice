@@ -7,7 +7,7 @@ function ContactsBlock(props) {
       <div className={styles.socials}>
         {props.socials?.map((item, index)=>{
           return <Link href={item.url} key={index}>
-            <a className={styles.social}>
+            <a target="_blank" className={styles.social}>
               {item.caption}
             </a>
           </Link>

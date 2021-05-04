@@ -1,6 +1,13 @@
-import moment from "moment";
+const copy = {
+  ru: {
+    email: "Для сотрудничества",
+  },
+  en: {
+    email: "Cooperation",
+  },
+};
 
-export default {
+const data = (copy) => ({
   Background: {
     src: [
       {
@@ -26,7 +33,8 @@ export default {
           },
           {
             caption: "Youtube",
-            url: "https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCy3b59BmaO87KiN5b49iggA%2Ffeatured&cc_key=",
+            url:
+              "https://vk.com/away.php?to=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCy3b59BmaO87KiN5b49iggA%2Ffeatured&cc_key=",
           },
           {
             caption: "Instagram",
@@ -42,11 +50,22 @@ export default {
           },
         ],
         contacts: {
-          blocks: [{ title: "Для сотрудничества", items: [{
-            content: "namedvicemusic@gmail.com"
-          }] }],
+          blocks: [
+            {
+              title: copy.email,
+              items: [
+                {
+                  content: "namedvicemusic@gmail.com",
+                },
+              ],
+            },
+          ],
         },
       },
     },
   ],
+});
+
+export default (lang) => {
+  return data(copy[lang]);
 };

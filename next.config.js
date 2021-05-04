@@ -24,6 +24,11 @@ module.exports = {
         destination: '/home',
         permanent: true,
       },
+      {
+        source: '/en',
+        destination: '/en/home',
+        permanent: true,
+      },
     ]
   }
 }

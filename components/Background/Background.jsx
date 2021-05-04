@@ -11,7 +11,7 @@ function Background(props) {
     <>
       <div
         className={`${styles.overlay} ${
-          router.asPath != "/home" ? styles.active : ""
+          !router.asPath.split('/').includes('home') ? styles.active : ""
         } ${
           props.src[0].type == 'color' ? styles.hidden : ""
         }`}
