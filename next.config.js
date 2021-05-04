@@ -21,12 +21,17 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/home',
+        destination: '/en/home',
         permanent: true,
       },
       {
         source: '/en',
         destination: '/en/home',
+        permanent: true,
+      },
+      {
+        source: '/ru',
+        destination: '/ru/home',
         permanent: true,
       },
     ]
