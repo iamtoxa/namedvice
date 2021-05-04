@@ -14,7 +14,6 @@ export default function Page({ page, pageLang }) {
       <main className="page">
         <Brand pageLang={pageLang}/>
         <NavBar pageLang={pageLang}/>
-        <Footer pageLang={pageLang}/>
         <Background {...page.Background} />
 
         <div className="page_container">
@@ -37,6 +36,8 @@ export default function Page({ page, pageLang }) {
             </CSSTransition>
           </SwitchTransition>
         </div>
+
+        <Footer pageLang={pageLang}/>
       </main>
     </div>
   );

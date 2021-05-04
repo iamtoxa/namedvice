@@ -1,15 +1,17 @@
 @import 'Styles/vars.scss';
 
 .Footer{
-  position: fixed;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
+
+  display: flex;
   z-index: 10;
   color: rgba(#FFF, 0.5);
-  display: flex;
   
-  margin-bottom: 46px;
-  margin-right: 53px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
 
   font-style: normal;
   font-weight: bold;
@@ -41,5 +43,17 @@
 
   .studio{
     color: rgba(#FFF, 0.9);
+  }
+
+
+
+
+  @media screen and (min-width: 1280px) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    padding-bottom: 46px;
+    padding-right: 53px;
   }
 }
