@@ -3,7 +3,7 @@
 .AboutBlock{
   >*{
     &:not(:last-child){
-      margin-bottom: 70px;
+      margin-bottom: 3.2em;
     }
 
     &:first-child{
@@ -93,13 +93,13 @@
 
 .quoteImg{
   height: 111px;
-  width: 40px;
+  width: 2em;
   object-fit: contain;
-  margin-bottom: -24px;
+  margin-bottom: -1em;
   @media screen and (min-width: 1280px) {
     margin-bottom: 0;
-    height: 111px;
-    width: 73px;
+    height: auto;
+    width: 3em;
 
     position: absolute;
     left: -20px;
