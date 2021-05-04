@@ -52,7 +52,7 @@ a {
   overflow-y: auto;
   max-height: calc(100vh - 80px);
 
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 250px);
 }
 
 .page{
