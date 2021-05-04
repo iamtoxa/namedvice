@@ -83,7 +83,7 @@ a {
 @media screen and (min-width: 1280px) {
   .page_container{
     min-height: 0;
-    max-width: calc(1024px + 600px);
+    max-width: calc(75em);
     margin: 0 auto;
     width: 100vw;
     padding: 0 300px;

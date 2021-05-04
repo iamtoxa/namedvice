@@ -18,12 +18,9 @@
   .social{
     font-style: normal;
     font-weight: 800;
-    font-size: 32px;
-    line-height: 46px;
-    
-    // color: #2B2A26;
-    // box-shadow: 0 0 0 3px #FFF;
-    // background-clip: text;
+    font-size: 2.2em;
+    line-height: 130%;
+  
     color: transparent;
     -webkit-text-stroke: 2px #FFF;
 
@@ -32,8 +29,8 @@
     
     @media screen and (min-width: 1280px) {
       font-weight: 800;
-      font-size: 48px;
-      line-height: 59px;
+      font-size: 2em;
+      line-height: 130%;
     }
 
     &:hover{
@@ -59,12 +56,12 @@
       display: block;
       font-style: normal;
       font-weight: 800;
-      font-size: 28px;
+      font-size: 1.75em;
       color: #FFFFFF;
-      margin-bottom: 16px;
+      margin-bottom: 0.75em;
 
       @media screen and (min-width: 1280px) {
-        font-size: 48px;
+        font-size: 2em;
       }
     }
 
@@ -73,13 +70,14 @@
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
-      line-height: 26px;
+      font-size: 1em;
+      line-height: 150%;
       letter-spacing: 0.1em;
       color: #FFFFFF;
 
       @media screen and (min-width: 1280px) {
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 1em;
+        line-height: 150%;
       }
     }
   }

@@ -17,6 +17,10 @@ function NavBar(props) {
     setOpened(!opened)
   }
 
+  const handleClose = ()=>{
+    setOpened(false)
+  }
+
   return (
     <>
     <div className={`${styles.toggle_btn} ${opened ? styles.opened : ""}`} onClick={handleToggle}>
@@ -27,7 +31,7 @@ function NavBar(props) {
     <div className={`${styles.NavBar} ${opened ? styles.opened : ""}`}>
       {data.items?.map((item, index)=>{
         return <Link key={index} href={`${props.pageLang ? `/${props.pageLang}${item.link}` : item.link}`}>
-          <a onClick={handleToggle} className={`${styles.link} ${router.asPath == item.link ? styles.active : ""}`}>
+          <a onClick={handleClose} className={`${styles.link} ${router.asPath == item.link ? styles.active : ""}`}>
             {item.caption}
           </a>
         </Link>

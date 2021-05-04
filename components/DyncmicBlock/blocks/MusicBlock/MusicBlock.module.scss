@@ -40,10 +40,10 @@
     color: #818181;
 
     font-weight: 600;
-    font-size: 16px;
+    font-size: 100%;
     min-width: fit-content;
     @media screen and (min-width: 1280px) {
-      font-size: 18px;
+      font-size: 100%;
     }
     letter-spacing: 0.05em;
 
@@ -60,17 +60,17 @@
     transition: 0.2s ease all;
 
     @media screen and (min-width: 1280px) {
-      height: 20px;
+      height: 0.8em;
     }
 
     &.active{
       color: #FFFFFF;
 
       font-weight: 600;
-      font-size: 20px;
+      font-size: 133%;
       @media screen and (min-width: 1280px) {
-        height: 30px;
-        font-size: 24px;
+        height: 1.2em;
+        font-size: 133%;
       }
       letter-spacing: 0.05em;
     }
@@ -83,16 +83,6 @@
   @media screen and (min-width: 1280px) {
     flex: 0;
   }
-  
-  .title{
-    color: #FFFFFF;
-    display: block;
-    text-align: center;
-
-    font-size: 48px;
-    margin: 0;
-    margin-bottom: 48px;
-  }
 
   .info{
     display: flex;
@@ -100,23 +90,22 @@
 
     .image{
       height: auto;
-      width: 100%;
+      width: 100vw;
 
-      max-height: 300px;
-      max-width: 300px;
-
+      max-height: 14em;
+      max-width: 14em;
       margin: 0 auto;
       
       @media screen and (min-width: 1280px) {
-        max-height: 300px;
-        max-width: 300px;
+        max-height: 14em;
+        max-width: 14em;
       }
 
 
       object-fit: cover;
       border-radius: 4px;
       display: block;
-      margin-bottom: 32px;
+      margin-bottom: 1em;
       @media screen and (min-width: 1280px) {
         filter: drop-shadow(0px 0px 60px rgba(255, 243, 178, 0.25));
       }
@@ -127,7 +116,7 @@
       flex-direction: column;
       align-items: flex-start;
       flex: 1;
-      margin-bottom: 32px;
+      margin-bottom: 1em;
 
       .prop{
         display: flex;
@@ -136,21 +125,21 @@
         width: 100%;
 
         &:not(:last-child){
-          margin-bottom: 8px;
+          margin-bottom: 0.5em;
         }
 
         .label{
           color: #FFF;
           opacity: 0.5;
-          font-size: 20px;
+          font-size: 110%;
           margin-right: 16px;
           min-width: 80px;
           max-width: 100px;
           
           @media screen and (min-width: 1280px) {
-            font-size: 20px;
+            font-size: 110%;
             margin-right: 16px;
-            min-width: 140px;
+            min-width: 5em;
           }
         }
 
@@ -160,11 +149,13 @@
           flex: 1;
           color: #FFF;
           opacity: 0.75;
-          font-size: 20px;
+          font-size: 110%;
+          min-width: fit-content;
 
           @media screen and (min-width: 1280px) {
-            font-size: 20px;
+            font-size: 110%;
             text-align: left;
+            min-width: fit-content;
           }
         }
       }
