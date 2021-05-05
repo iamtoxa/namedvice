@@ -18,6 +18,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-preload-image": "^1.0.7",
     "react-transition-group": "^4.4.1",
+    "react-yandex-metrika": "^2.6.0",
     "sass": "^1.32.8"
   }
 }

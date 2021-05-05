@@ -44,7 +44,7 @@ export default function Page({ page, pageLang }) {
 }
 
 export async function getServerSideProps(context) {
-  console.log(context.query.slug)
+  // console.log(context.query.slug)
   var pageLang = 'en';
   try {
     const pageSlug = context.query.slug.filter(el=>!['en', 'ru'].includes(el)).join('/')

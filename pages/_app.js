@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import '../styles/globals.css'
-
+import { YMInitializer } from 'react-yandex-metrika';
 
 const MyApp = React.forwardRef(({ Component, pageProps }, ref)=>{
   useEffect(()=>{
@@ -40,7 +40,15 @@ const MyApp = React.forwardRef(({ Component, pageProps }, ref)=>{
     calculate()
   }, [])
 
-  return <Component {...pageProps} />
+  return <>
+    <YMInitializer accounts={[77761972]} options={{
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    }}/>
+    <Component {...pageProps} />
+  </>
 })
 
 export default MyApp
