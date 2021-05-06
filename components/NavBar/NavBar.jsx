@@ -38,7 +38,7 @@ function NavBar(props) {
         </Link>
       })}
 
-      <Footer className={styles.footer}/>
+      <Footer className={styles.footer} pageLang={props.pageLang}/>
     </div>
     </>
   );
