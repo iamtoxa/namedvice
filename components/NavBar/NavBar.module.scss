@@ -4,7 +4,7 @@
     .link{
     display: block;
 
-    &:not(:last-child){
+    &:not(:last-of-type){
       margin-bottom: 0.92em;
     }
 
@@ -31,7 +31,7 @@
     @media screen and (min-width: 768px) {
       font-size: 1.5em;
 
-      &:not(:last-child){
+      &:not(:last-of-type){
         margin-bottom: 1.5em;
       }
     }
@@ -39,7 +39,7 @@
     @media screen and (min-width: 1280px) {
       font-size: 0.75em;
 
-      &:not(:last-child){
+      &:not(:last-of-type){
         margin-bottom: 0.92em;
       }
     }

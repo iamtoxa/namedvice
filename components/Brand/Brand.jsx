@@ -7,13 +7,27 @@ function Brand(props) {
   const router = useRouter();
 
   return (
-    <div className={`${styles.Brand} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
+    <div
+      className={`${styles.Brand} ${
+        !router.asPath.split("/").includes("home") ? styles.small : ""
+      }`}
+    >
       <Link href={`${props.pageLang ? `/${props.pageLang}/home` : "/home"}`}>
-        <a className={`${styles.title} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
+        <a
+          className={`${styles.title} ${
+            !router.asPath.split("/").includes("home") ? styles.small : ""
+          }`}
+        >
           <span>Namedvice</span>
         </a>
       </Link>
-      <span className={`${styles.description} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>автор и испольнитель</span>
+      <span
+        className={`${styles.description} ${
+          !router.asPath.split("/").includes("home") ? styles.small : ""
+        }`}
+      >
+        {props.pageLang == "en" ? "author and performer" : "автор и испольнитель"}
+      </span>
     </div>
   );
 }
