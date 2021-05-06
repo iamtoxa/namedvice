@@ -12,8 +12,8 @@ export default function Page({ page, pageLang }) {
   return (
     <div>
       <main className="page">
-        <Brand pageLang={pageLang}/>
-        <NavBar pageLang={pageLang}/>
+        <Brand pageLang={pageLang} />
+        <NavBar pageLang={pageLang} />
         <Background {...page.Background} />
 
         <div className="page_container">
@@ -25,19 +25,18 @@ export default function Page({ page, pageLang }) {
               }}
               classNames="fade"
             >
-              <>{page.content?.map((page_item, index) => {
-                return (
-                  <>
-                    <DynBlock key={index} {...page_item} pageLang={pageLang}/>
-                  </>
-                );
-              })}
+              <>
+                {page.content?.map((page_item, index) => {
+                  return (
+                    <DynBlock key={index} {...page_item} pageLang={pageLang} />
+                  );
+                })}
               </>
             </CSSTransition>
           </SwitchTransition>
         </div>
 
-        <Footer pageLang={pageLang}/>
+        <Footer pageLang={pageLang} />
       </main>
     </div>
   );
@@ -45,19 +44,21 @@ export default function Page({ page, pageLang }) {
 
 export async function getServerSideProps(context) {
   // console.log(context.query.slug)
-  var pageLang = 'en';
+  var pageLang = "en";
   try {
-    const pageSlug = context.query.slug.filter(el=>!['en', 'ru'].includes(el)).join('/')
+    const pageSlug = context.query.slug
+      .filter((el) => !["en", "ru"].includes(el))
+      .join("/");
 
-    pageLang = context.query.slug.find(el=>['en', 'ru'].includes(el)) || 'en'
+    pageLang =
+      context.query.slug.find((el) => ["en", "ru"].includes(el)) || "en";
 
-    var pageData = require(`Mocks/pages/${pageSlug}`)
-      .default;
+    var pageData = require(`Mocks/pages/${pageSlug}`).default;
   } catch (e) {
     var pageData = {
       slug: "404",
       page: [],
-      pageLang
+      pageLang,
     };
   }
 
@@ -65,7 +66,7 @@ export async function getServerSideProps(context) {
     props: {
       slug: context.query.slug,
       page: pageData(pageLang),
-      pageLang
+      pageLang,
     },
   };
 }

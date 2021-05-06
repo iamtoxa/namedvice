@@ -7,11 +7,14 @@ function Brand(props) {
   const router = useRouter();
 
   return (
-    <Link href={`${props.pageLang ? `/${props.pageLang}/home` : "/home"}`}>
-      <a className={`${styles.Brand} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
-          Namedvice
-      </a>
-    </Link>
+    <div className={`${styles.Brand} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
+      <Link href={`${props.pageLang ? `/${props.pageLang}/home` : "/home"}`}>
+        <a className={`${styles.title} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>
+          <span>Namedvice</span>
+        </a>
+      </Link>
+      <span className={`${styles.description} ${!router.asPath.split('/').includes('home') ? styles.small : ""}`}>автор и испольнитель</span>
+    </div>
   );
 }
 

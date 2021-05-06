@@ -18,15 +18,24 @@
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  font-size: 66%;
-  line-height: 20px;
+  font-size: 0.66em;
+
+  display: none;
 
   >*:not(:last-child){
-    margin-right: 8px;
-
-    border-right: 1px solid #FFFFFF;
-
-    padding-right: 8px;
+    margin-right: 20px;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 1px;
+      height: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #FFF;
+    }
   }
 
 
@@ -52,6 +61,7 @@
 
 
   @media screen and (min-width: 1280px) {
+    display: flex;
     position: fixed;
     bottom: 0;
     right: 0;

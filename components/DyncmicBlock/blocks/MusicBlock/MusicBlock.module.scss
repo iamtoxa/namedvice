@@ -19,7 +19,7 @@
     position: fixed;
     left: 60px;
     top: 50%;
-    transform: translateY(calc(-25% + (var(--selected-index) * -38px)));
+    transform: translateY(calc(-25% + (var(--selected-index) * -1.4em)));
 
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
     font-size: 100%;
     min-width: fit-content;
     @media screen and (min-width: 1280px) {
-      font-size: 100%;
+      font-size: 0.70em;
     }
     letter-spacing: 0.05em;
 
@@ -70,7 +70,7 @@
       font-size: 133%;
       @media screen and (min-width: 1280px) {
         height: 1.2em;
-        font-size: 133%;
+        font-size: 1em;
       }
       letter-spacing: 0.05em;
     }
@@ -124,6 +124,7 @@
         justify-content: flex-start;
         width: 100%;
 
+
         &:not(:last-child){
           margin-bottom: 0.5em;
         }
@@ -133,13 +134,12 @@
           opacity: 0.5;
           font-size: 110%;
           margin-right: 16px;
-          min-width: 80px;
-          max-width: 100px;
           
           @media screen and (min-width: 1280px) {
-            font-size: 110%;
+            font-size: 0.75em;
             margin-right: 16px;
-            min-width: 5em;
+            min-width: 7em;
+            max-width: none;
           }
         }
 
@@ -153,7 +153,7 @@
           min-width: fit-content;
 
           @media screen and (min-width: 1280px) {
-            font-size: 110%;
+            font-size: 0.75em;
             text-align: left;
             min-width: fit-content;
           }
@@ -173,6 +173,7 @@
         font-weight: 600;
         padding: 1em 2em;
         border-radius: 10px;
+        font-size: 0.75em;
 
         transition: 0.2s ease all;
 

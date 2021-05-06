@@ -6,8 +6,12 @@ import { useEffect, useState } from "react";
 function Footer(props) {
   const router = useRouter();
 
+  const pageSlug = router.asPath.split('/').filter((val,index)=>{
+    return index>1 && !!val
+  }).join('/')
+
   return (
-    <div className={styles.Footer}>
+    <div className={`${props.className} ${styles.Footer}`}>
       <span>
         {"MADE BY "}
         <Link href={"https://m-dev.studio"}>
@@ -15,7 +19,7 @@ function Footer(props) {
         </Link>
       </span>
       <div className={styles.langs}>
-        <Link href={"/ru/home"}>
+        <Link href={`/ru/${pageSlug}`}>
           <a
             className={`${styles.lang} ${
               props.pageLang == "ru" ? styles.active : ""
@@ -24,7 +28,7 @@ function Footer(props) {
             RU
           </a>
         </Link>
-        <Link href={"/en/home"}>
+        <Link href={`/en/${pageSlug}`}>
           <a
             className={`${styles.lang} ${
               props.pageLang == "en" ? styles.active : ""

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from "react";
 
 import mockData from 'Mocks/components/NavBar.js';
+import Footer from "Components/Footer/Footer";
 
 function NavBar(props) {
 
@@ -36,6 +37,8 @@ function NavBar(props) {
           </a>
         </Link>
       })}
+
+      <Footer className={styles.footer}/>
     </div>
     </>
   );
