@@ -40,7 +40,7 @@ const data = (copy) => ({
           {
             caption: "Rebirth",
             slug: "rebirth",
-            image: "/images/Tracks/namedvice.png",
+            image: "/images/Tracks/rebirth.jpg",
             spotify_slug: "4GfwrzTviKyj1Ttb729Pws",
             info: [
               {
