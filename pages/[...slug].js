@@ -44,13 +44,16 @@ export default function Page({ page, pageLang }) {
 
 export async function getServerSideProps(context) {
   var pageLang = context.req?.headers['accept-language']?.split(';')[0].split(',')[0].substr(0,2) || 'en';
+  if(!['en','ru'].includes(pageLang)){
+    pageLang = 'en'
+  }
   try {
     const pageSlug = context.query.slug
       .filter((el) => !["en", "ru"].includes(el))
       .join("/");
 
     pageLang =
-      context.query.slug.find((el) => ["en", "ru"].includes(el)) || context.req?.headers['accept-language']?.split(';')[0].split(',')[0].substr(0,2) || 'en';
+      context.query.slug.find((el) => ["en", "ru"].includes(el)) || pageLang;
 
     var pageData = require(`Mocks/pages/${pageSlug}`).default;
   } catch (e) {
