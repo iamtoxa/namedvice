@@ -1,11 +1,13 @@
 const copy = {
   ru: {
+    button_video: "Смотреть клип",
     spotyfy_btn: "Открыть в Spotify",
     prop_name: 'Название',
     prop_album: 'Альбом',
     prop_year: 'Год выпуска'
   },
   en: {
+    button_video: 'Watch the clip',
     spotyfy_btn: "Open with Spotify",
     prop_name: 'Name',
     prop_album: 'Album',
@@ -31,7 +33,27 @@ const data = (copy) => ({
         button: {
           caption: copy.spotyfy_btn
         },
+        button_video: {
+          caption: copy.button_video
+        },
         playlist: [
+          {
+            caption: "Rebirth",
+            slug: "rebirth",
+            image: "/images/Tracks/namedvice.png",
+            spotify_slug: "4GfwrzTviKyj1Ttb729Pws",
+            info: [
+              {
+                label: copy.prop_name,
+                value: "Rebirth",
+              },
+              {
+                label: copy.prop_year,
+                value: "2021",
+              },
+            ],
+            video_url: 'https://youtu.be/c-gOgX9k6pM'
+          },
           {
             caption: "Little Empire",
             slug: "little_empire",

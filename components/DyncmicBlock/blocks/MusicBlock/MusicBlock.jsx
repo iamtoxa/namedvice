@@ -43,7 +43,8 @@ function MusicBlock(props) {
               </div>
 
               <div className={styles.actions}>
-                <Link target="_blank" href={`https://open.spotify.com/track/${track.spotify_slug}`}><a target="_blank">{props.button.caption}</a></Link>              
+                <Link target="_blank" href={`https://open.spotify.com/track/${track.spotify_slug}`}><a target="_blank">{props.button.caption}</a></Link>
+                {track.video_url && <Link target="_blank" href={track.video_url}><a target="_blank">{props.button_video.caption}</a></Link>}
               </div>
             </div>
           </>

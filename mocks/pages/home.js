@@ -1,8 +1,10 @@
 
 const copy = {
   ru: {
+    alertBtn_text: "Новый сингл"
   },
   en: {
+    alertBtn_text: 'New single'
   },
 };
 
@@ -17,7 +19,18 @@ const data = (copy) => ({
 
     ],
     alt: "Namedvice",
-  }
+  },
+  
+  content: [
+    {
+      component: 'AlertBlock',
+      content: {
+        icon: '/images/fire.svg',
+        text: copy.alertBtn_text,
+        url: '/music'
+      }
+    }
+  ]
 });
 
 export default (lang) => {

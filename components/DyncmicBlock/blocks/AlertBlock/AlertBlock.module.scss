@@ -1,0 +1,83 @@
+@import "Styles/vars.scss";
+
+.Link {
+  display: flex;
+  align-items: center;
+
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+
+  margin-top: 60px;
+  margin-right: 53px;
+
+  font-weight: 600;
+  font-size: 0.65em;
+  line-height: 90%;
+  padding: 10px 20px;
+
+  img {
+    margin-right: 4px;
+    transition: 0.2s ease all;
+  }
+
+  text-transform: uppercase;
+
+  position: fixed;
+  top: auto;
+  right: auto;
+  left: 50%;
+  bottom: 32px;
+  width: max-content;
+  transform: translateX(-50%);
+  animation: fadeIn 0.5s ease 0.25s 1 forwards;
+  opacity: 0;
+
+  transition: color 0.2s ease, background 0.2s ease;
+  &:hover{
+    color: #000;
+    background: #FFF;
+
+    img{
+      filter: saturate(0) brightness(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      transform: translateX(-50%) translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: none;
+
+    animation: fadeIn 0.5s ease 0.25s 1 forwards;
+    opacity: 0;
+
+    @keyframes fadeIn {
+      from {
+        transform: translateX(50px) translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

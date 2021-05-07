@@ -33,7 +33,7 @@ module.exports = {
         source: '/ru',
         destination: '/ru/home',
         permanent: true,
-      },
+      }
     ]
   }
 }
