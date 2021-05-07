@@ -7,7 +7,7 @@ function Footer(props) {
   const router = useRouter();
 
   const pageSlug = router.asPath.split('/').filter((val,index)=>{
-    return index>1 && !!val
+    return !['en', 'ru'].includes(val) && !!val
   }).join('/')
 
   return (
